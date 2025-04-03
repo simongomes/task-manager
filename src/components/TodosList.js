@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import TodoItem from "./TodoItem";
 
 const TodosList = () => {
-  const todos = useSelector(({ todos }) => todos);
+  const todos = useSelector(({ todos }) => todos.todos);
   return (
     <div>
       {todos.map((todo) => (

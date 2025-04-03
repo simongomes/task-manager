@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { CHANGE_STATUS, DELETE_TODO } from "../store/actions";
+import { CHANGE_STATUS, DELETE_TODO, SET_ACTIVE_TODO } from "../store/actions";
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
@@ -21,6 +21,10 @@ const TodoItem = ({ todo }) => {
     dispatch({ type: DELETE_TODO, payload: id });
   };
 
+  const handleSetActiveTodo = (id) => {
+    dispatch({ type: SET_ACTIVE_TODO, payload: id });
+  };
+
   return (
     <li className="todo-item">
       <input
@@ -29,7 +33,12 @@ const TodoItem = ({ todo }) => {
         onChange={() => handleStatusChange(id)}
       />
       <button onClick={() => deleteTodo(id)}>Delete</button>
-      <span style={completed ? completedStyle : null}>{title}</span>
+      <span
+        style={completed ? completedStyle : null}
+        onClick={() => handleSetActiveTodo(id)}
+      >
+        {title}
+      </span>
     </li>
   );
 };

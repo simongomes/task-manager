@@ -36,8 +36,9 @@ You should see the app in your browser address bar at [http://localhost:3000](ht
 - Convert all the class components to functional ✅
 - Add Redux to manage app states ✅
 - Details Component
-  - Status
-  - Title
-  - Description
-  - Tags
-  - Assignee
+  - Status ✅
+  - Title ✅
+  - Description ✅
+  - Tags ✅
+  - Assignee ✅
+  - Save the updated todo item ✅
