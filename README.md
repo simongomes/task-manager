@@ -33,4 +33,4 @@ You should see the app in your browser address bar at [http://localhost:3000](ht
 ## Improvements
 
 - Upgrade the react packages ✅
-- Convert all the class components to functional
+- Convert all the class components to functional ✅
