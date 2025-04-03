@@ -34,3 +34,10 @@ You should see the app in your browser address bar at [http://localhost:3000](ht
 
 - Upgrade the react packages ✅
 - Convert all the class components to functional ✅
+- Add Redux to manage app states ✅
+- Details Component
+  - Status
+  - Title
+  - Description
+  - Tags
+  - Assignee

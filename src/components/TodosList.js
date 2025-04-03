@@ -1,16 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import TodoItem from "./TodoItem";
 
-const TodosList = ({ todos, handleChangeProps, deleteTodoProps }) => {
+const TodosList = () => {
+  const todos = useSelector(({ todos }) => todos);
   return (
     <div>
       {todos.map((todo) => (
-        <TodoItem
-          key={todo.id}
-          todo={todo}
-          handleChangeProps={handleChangeProps}
-          deleteTodoProps={deleteTodoProps}
-        />
+        <TodoItem key={todo.id} todo={todo} />
       ))}
     </div>
   );

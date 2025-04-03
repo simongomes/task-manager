@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { ADD_TODO } from "../store/actions";
 
-const InputTodo = ({ addTodoProps }) => {
+const InputTodo = () => {
+  const dispatch = useDispatch();
+
   const [title, setTitle] = useState("");
 
   const onChange = (e) => {
@@ -9,9 +13,13 @@ const InputTodo = ({ addTodoProps }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodoProps(title);
+    dispatch({
+      type: ADD_TODO,
+      payload: title,
+    });
     setTitle("");
   };
+
   return (
     <form onSubmit={handleSubmit} className="form-container">
       <input
